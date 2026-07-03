@@ -61,6 +61,7 @@ local function read_history(path, max_items)
 				label = line,
 				kind = cmp.lsp.CompletionItemKind.Text,
 				sortText = string.format("%08d", #items + 1),
+				dup = 0,
 			}
 			if #items >= max_items then
 				break
