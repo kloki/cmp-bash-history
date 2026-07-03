@@ -21,7 +21,7 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  'koenklinkers/cmp-bash-history',
+  'kloki/cmp-bash-history',
   dependencies = { 'hrsh7th/nvim-cmp' },
 }
 ```
@@ -30,7 +30,7 @@ With [vim-plug](https://github.com/junegunn/vim-plug):
 
 ```vim
 Plug 'hrsh7th/nvim-cmp'
-Plug 'koenklinkers/cmp-bash-history'
+Plug 'kloki/cmp-bash-history'
 ```
 
 ## Setup
@@ -74,19 +74,13 @@ Pass options via the `option` table of the source entry:
 }
 ```
 
-| Option      | Default                              | Description                                          |
-| ----------- | ------------------------------------ | ---------------------------------------------------- |
-| `histfile`  | `$HISTFILE`, else `~/.bash_history`  | History file to read.                                |
-| `max_items` | `5000`                               | Maximum number of items returned, most recent first. |
+| Option      | Default                             | Description                                          |
+| ----------- | ----------------------------------- | ---------------------------------------------------- |
+| `histfile`  | `$HISTFILE`, else `~/.bash_history` | History file to read.                                |
+| `max_items` | `5000`                              | Maximum number of items returned, most recent first. |
 
 Blank lines and `HISTTIMEFORMAT` timestamp lines (`#1719999999`) are skipped.
 The parsed history is cached and only re-read when the file changes.
-
-## Possible future work
-
-- Word-level completion mode
-- zsh / fish history formats
-- Watching the history file live via libuv fs events
 
 ## License
 
